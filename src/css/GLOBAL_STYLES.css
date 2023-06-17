@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: 'Roboto', 'font', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: normal;
+	color: #fff;
+}
+
+:root {
+    --main-theme-turquoise-color: #0BAA9E;
+    --background-theme: #3D3D3D;
+    --field-isolator: #00000033;
+
+    --field-text-size: 13px;
+    --field-text-line-height: 20px;
+    --field-text-weight: 400;
+
+    --field-title-size: 18px;
+    --field-title-line-height: auto;
+    --field-title-weight: 400;
+
+    --header-title-size: 28px;
+    --header-title-line-height: auto;
+    --header-title-weight: 600;
+
+    --header-button-text-size: 22px;
+    --header-button-text-line-height: auto;
+    --header-button-text-weight: 400;
+}
