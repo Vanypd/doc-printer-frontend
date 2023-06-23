@@ -1,0 +1,31 @@
+.home_button {
+    position: relative;
+    width: 200px;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.home_button:hover {
+    background-color: var(--field-isolator);
+}
+
+.home_button:active {
+    filter: brightness(75%);
+}
+
+.home_button_icon {
+    position: absolute;
+    top: 16px;
+    right: 25px;
+    fill: none;
+    stroke: white;
+}
+
+.home_button_text {
+    font-size: var(--header-button-text-size);
+    line-height: var(--header-button-text-line-height);
+    font-weight: var(--header-button-text-weight);
+}

@@ -1,0 +1,17 @@
+.data {
+    padding: 20px 0;
+}
+
+.title {
+    display: flex;
+    min-height: 40px;
+    align-self: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.flex_wrapper {
+    display: flex;
+    flex-direction: row;
+}

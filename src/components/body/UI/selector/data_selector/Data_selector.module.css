@@ -1,0 +1,147 @@
+:root {
+    --selector-width: 100%;
+    --selector-height: 40px;
+
+    --custom-color: var(--main-theme-turquoise-color);
+}
+
+.selector_box {
+    display: flex;
+    justify-content: center;
+    width: var(--selector-width);
+}
+
+.selector_container {
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    justify-content: inherit;
+}
+
+.selector {
+    position: relative;
+    display: flex;
+    justify-content: inherit;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: inherit;
+    height: var(--selector-height);
+    cursor: pointer;
+    user-select: none;
+
+    border: 1px solid var(--main-theme-turquoise-color);
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.selector:hover {
+    transition: all 0.1s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: var(--main-theme-turquoise-color);
+}
+
+.selector_active {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    border: none;
+}
+
+.selector_active:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.selector_char {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -6px;
+    right: -5px;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    fill: var(--main-theme-turquoise-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.selector_char_active {
+    transform: rotate(0deg);
+}
+
+.selector_menu {
+    position: absolute;
+    top: calc(var(--selector-height) + 3px);
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    height: 0px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    overflow: hidden;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.selector_menu_active {
+    height: auto;
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.selector_option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: var(--selector-height);
+    cursor: pointer;
+}
+
+.selector_option:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.non_used_span {
+    text-align: center;
+    color: var(--custom-color);
+    font-size: var(--field-text-size);
+    line-height: var(--field-text-line-height);
+
+}
+
+.used_span {
+    text-align: center;
+    color: var(--custom-color);
+    font-size: var(--field-title-size);
+    line-height: var(--field-title-line-height);
+}
+
+.font_field_weight {
+    font-weight: var(--field-text-weight)
+}
+
+.font_title_weight {
+    font-weight: var(--field-title-weight)
+}
+
+.color_white {
+    color: white;
+}
+
+.color_custom {
+    color: var(--main-theme-turquoise-color);
+}
+
+.font_size_field {
+    font-size: var(--field-text-size);
+    line-height: var(--field-text-line-height);
+}
+
+.font_size_title {
+    font-size: var(--field-title-size);
+    line-height: var(--field-title-line-height);
+}

@@ -1,0 +1,10 @@
+.division {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 40px;
+}
+
+.division:not(:last-child) {
+    margin-bottom: 20px;
+}

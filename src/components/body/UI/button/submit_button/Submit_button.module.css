@@ -1,0 +1,43 @@
+.submit_button {
+    display: flex;
+    margin: 0 auto;
+    width: 250px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--main-theme-turquoise-color);
+    border-radius: 10px;
+    outline: none;
+    outline-color: var(--main-theme-turquoise-color);
+
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.1s ease-in-out;
+}
+
+.submit_button span {
+    font-size: var(--field-title-size);
+    line-height: var(--field-title-line-height);
+    font-weight: var(--field-title-weight);
+    color: var(--main-theme-turquoise-color);
+}
+
+.submit_button:focus {
+    outline: 1px solid var(--main-theme-turquoise-color);
+    outline-offset: 3px;
+}
+
+.submit_button:hover {
+    outline-color: var(--main-theme-turquoise-color);
+    background-color: var(--main-theme-turquoise-color);
+}
+
+.submit_button:hover span {
+    color: white;
+}
+
+.submit_button:active {
+    outline: none;
+    outline-color: var(--main-theme-turquoise-color);
+    filter: brightness(75%);
+}

@@ -17,17 +17,17 @@
 
     --field-text-size: 13px;
     --field-text-line-height: 20px;
-    --field-text-weight: 400;
+    --field-text-weight: 300;
 
     --field-title-size: 18px;
     --field-title-line-height: auto;
     --field-title-weight: 400;
 
-    --header-title-size: 28px;
+    --header-title-size: 24px;
     --header-title-line-height: auto;
     --header-title-weight: 600;
 
-    --header-button-text-size: 22px;
+    --header-button-text-size: 18px;
     --header-button-text-line-height: auto;
     --header-button-text-weight: 400;
 }

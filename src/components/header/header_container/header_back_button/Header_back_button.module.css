@@ -1,0 +1,30 @@
+.back_button {
+    position: relative;
+    width: 200px;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.back_button:hover {
+    background-color: var(--field-isolator);
+}
+
+.back_button:active {
+    filter: brightness(75%);
+}
+
+.back_button_icon {
+    position: absolute;
+    top: 18px;
+    left: 55px;
+    fill: white;
+}
+
+.back_button_text {
+    font-size: var(--header-button-text-size);
+    line-height: var(--header-button-text-line-height);
+    font-weight: var(--header-button-text-weight);
+}

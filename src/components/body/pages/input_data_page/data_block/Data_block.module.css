@@ -1,0 +1,29 @@
+.section {
+    position: relative;
+    padding: 15px;
+    border: 1px solid var(--main-theme-turquoise-color);
+}
+
+.section:not(:last-child) {
+    margin-bottom: 100px;
+}
+
+.tag {
+    position: absolute;
+    display: flex;
+    top: -20px;
+    left: -1px;
+    width: 245px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--main-theme-turquoise-color);
+}
+
+.tag span {
+    font-size: var(--field-text-size);
+    line-height: var(--field-text-line-height);
+    font-weight: var(--field-text-weight);
+}
