@@ -27,12 +27,20 @@ body {
     line-height: var(--field-title-line-height);
     font-weight: var(--field-title-weight);
     color: var(--main-theme-turquoise-color);
+    /* color: white; */
 }
 
 .field_text_style {
     font-size: var(--field-text-size);
     line-height: var(--field-text-line-height);
     font-weight: var(--field-text-weight);
+    color: white;
+}
+
+.header_title_style {
+    font-size: var(--header-title-size);
+    line-height: var(--header-title-line-height);
+    font-weight: var(--header-title-weight);
     color: white;
 }
 

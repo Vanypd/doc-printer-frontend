@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import cl from './Data_selector.module.css'
 
-const Data_selector = ({ options, value, setValue, selectorStyle, defaulLable, usedStyle, nonUsedStyle }) => {
+const Data_selector = ({ options, value, setValue, selectorStyle, defaultLable, usedStyle, nonUsedStyle }) => {
     const [isActive, setActive] = useState(false)
-    const [lable, setLable] = useState(defaulLable)
+    const [lable, setLable] = useState(defaultLable)
     const [isUsed, setUsed] = useState(false)
     const rootEl = useRef(null);
 
@@ -12,12 +12,12 @@ const Data_selector = ({ options, value, setValue, selectorStyle, defaulLable, u
         else { setActive(true) }
     }
 
-    const selectOption = (e) => {
+    const selectOption = (e, index) => {
         if (!isUsed) { setUsed(true) }
-
         setLable(e.target.innerHTML)
-        setValue(e.target.innerHTML)
+        setValue(index + 1)
         setActive(false)
+
     }
 
     const usedSpanClassManager = () => {
@@ -30,7 +30,7 @@ const Data_selector = ({ options, value, setValue, selectorStyle, defaulLable, u
         }
         return classArray.join(' ')
     }
-// GUIDE: weight, color, size
+    // GUIDE: weight, color, size
     const nonUsedSpanClassManager = () => {
         let classArray = [cl.non_used_span]
 
@@ -50,13 +50,24 @@ const Data_selector = ({ options, value, setValue, selectorStyle, defaulLable, u
         }
     }, [isActive])
 
+    useMemo(() => {
+     if (value) {
+        setUsed(true)
+        setLable(options[value - 1])
+     }
+    }, [options, value])
+
     return (
         <div className={cl.selector_box} style={selectorStyle}>
             <div className={cl.selector_container}>
                 <div ref={rootEl} onClick={activeChanger} className={(isActive) ? [cl.selector, cl.selector_active].join(' ') : cl.selector}>
 
                     {/* LABLE */}
-                    {isUsed ? <span className={usedSpanClassManager()}>{lable}</span> : <span className={nonUsedSpanClassManager()}>{lable}</span>}
+                    {(value)
+                        ? <span className={usedSpanClassManager()}>{lable}</span>
+                        : isUsed
+                            ? <span className={usedSpanClassManager()}>{lable}</span>
+                            : <span className={nonUsedSpanClassManager()}>{lable}</span>}
 
                     {/* ICON */}
                     <span >
@@ -66,8 +77,8 @@ const Data_selector = ({ options, value, setValue, selectorStyle, defaulLable, u
 
                     {/* SELECTOR MENU */}
                     <div className={isActive ? [cl.selector_menu, cl.selector_menu_active].join(' ') : cl.selector_menu}>
-                        {options.map(option =>
-                            <div key={option} onClick={(e) => selectOption(e)} className={cl.selector_option}>{option}</div>
+                        {options.map((option, index) =>
+                            <div key={option} onClick={(e) => selectOption(e, index)} className={cl.selector_option}>{option}</div>
                         )}
                     </div>
                 </div>

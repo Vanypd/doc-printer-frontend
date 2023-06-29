@@ -4,8 +4,10 @@ import cl from './Data_textarea.module.css'
 const Data_textarea = ({id, data, setData, disabled, ...props}) => {
 
   const inputText = (e) => {
-    e.target.style.height = 'auto';
+    // e.target.style.height = 'auto';
     e.target.style.height = (e.target.scrollHeight) + 'px';
+    console.log(e.target.scrollHeight)
+    setData(e.target.value)
   }
 
   return (
@@ -16,7 +18,6 @@ const Data_textarea = ({id, data, setData, disabled, ...props}) => {
     type='text'
     id={id}
     value={data}
-    // onChange={e => setData(e.target.value)}
     ></textarea>
   )
 }

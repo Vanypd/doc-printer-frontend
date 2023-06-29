@@ -12,9 +12,9 @@ function App() {
   const [fullName, setFullName] = useState('')
   const [dateOfBirth, setDateOfBirth] = useState('')
   const [snils, setSnils] = useState('')
-  const [gender, setGender] = useState('')
-  const [bloodType, setBloodType] = useState('')
-  const [disability, setDisability] = useState('')
+  const [gender, setGender] = useState(undefined)
+  const [bloodType, setBloodType] = useState(undefined)
+  const [disability, setDisability] = useState(undefined)
 
   const [date, setDate] = useState('')
   const [complaints, setComplaints] = useState('')
@@ -22,7 +22,7 @@ function App() {
   const [histoDate, setHistoDate] = useState('')
   const [histoNumber, setHistoNumber] = useState('')
   const [histoComment, setHistoComment] = useState('')
-  const [councilType, setCouncilType] = useState('')
+  const [councilType, setCouncilType] = useState(undefined)
   const [councilNumber, setCouncilNumber] = useState('')
   const [councilDate, setCouncilDate] = useState('')
   const [councilComment, setCouncilComment] = useState('')
@@ -33,7 +33,7 @@ function App() {
   const [diagnosis, setDiagnosis] = useState('')
   const [complications, setComplications] = useState('')
   const [concomitantDiagnosis, setConcomitantDiagnosis] = useState('')
-  const [plans, setPlans] = useState('')
+  const [plans, setPlans] = useState(undefined)
   const [vtecRiskLevel, setVtecRiskLevel] = useState('')
   const [goRisk, setGoRisk] = useState('')
   const [vtecPrevent, setVtecPrevent] = useState('')
@@ -47,58 +47,6 @@ function App() {
   const [instrumentalExaminationMethods, setInstrumentalExaminationMethods] = useState('')
 
   const [recomendations, setRecomendations] = useState('')
-
-  // const [bloodDate, setBloodDate] = useState('')
-  // const [rbc, setRbc] = useState('')
-  // const [wbc, setWbc] = useState('')
-  // const [plt, setPlt] = useState('')
-  // const [hgb, setHgb] = useState('')
-
-  // const [bioDate, setBioDate] = useState('')
-  // const [alt, setAlt] = useState('')
-  // const [ast, setAst] = useState('')
-  // const [tb, setTb] = useState('')
-  // const [gluc, setGluc] = useState('')
-  // const [cre, setCre] = useState('')
-  // const [ua, setUa] = useState('')
-
-  // const [urinDate, setUrinDate] = useState('')
-  // const [urinComment, setUrinComment] = useState('')
-
-  // const completeBloodCount = {
-  //   bloodDate: bloodDate,
-  //   analyzes: {
-  //     rbc: rbc,
-  //     wbc: wbc,
-  //     plt: plt,
-  //     hgb: hgb,
-  //   },
-  // }
-
-  // const biochemicalAnalysis = {
-  //   bioDate: bioDate,
-  //   analyzes: {
-  //     alt: alt,
-  //     ast: ast,
-  //     tb: tb,
-  //     gluc: gluc,
-  //     cre: cre,
-  //     ua: ua,
-  //   },
-  // }
-
-  // const urinalysis = {
-  //   urinDate: urinDate,
-  //   urinComment: urinComment,
-  // }
-
-  const [clinicalAnalyzes, setClinicalAnalyzes] = useState([{selectorValue: 1, date: '',}, {selectorValue: 2, date: '',}, {selectorValue: 3, date: '',}])
-
-  const handleChange = () => {
-    const newArray = [...clinicalAnalyzes];
-
-    
-  }
 
   const patientData = {
     patientСard: {
@@ -115,8 +63,8 @@ function App() {
       complaints: complaints, // Жалобы
       medicalHistory: medicalHistory, // Анамнез заболевания
       histologicalConclusion: {
-        histoDate: histoDate, // Дата гистологического заключения
         histoNumber: histoNumber, // Номер гистологического заключения
+        histoDate: histoDate, // Дата гистологического заключения
         histoComment: histoComment, // Комментарий гистологического заключения
       },
       council: {
@@ -206,5 +154,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

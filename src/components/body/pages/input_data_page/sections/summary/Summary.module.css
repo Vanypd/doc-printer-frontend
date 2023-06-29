@@ -1,0 +1,105 @@
+.data {
+    position: relative;
+    padding: 20px 0;
+}
+
+.title {
+    display: flex;
+    min-height: 40px;
+    align-self: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.center_title {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    border-bottom: 1px solid var(--main-theme-turquoise-color);
+    justify-content: center;
+    align-self: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.title_char {
+    display: flex;
+    min-height: 40px;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.flex_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.isolation_block {
+    position: relative;
+}
+
+.isolation_recolor {
+    width: calc(100% + 30px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    background-color: var(--field-isolator);
+}
+
+.isolation {
+    position: relative;
+    margin: 0 auto;
+    padding: 30px 0;
+    z-index: 2;
+}
+
+.analyze_adder_block {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /* border: 1px solid black; */
+}
+
+.analyze_adder_button {
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, #3D3D3D 100%);
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.analyze_adder_icon {
+    fill: var(--main-theme-turquoise-color);
+    transform: scale(100%);
+
+    transition: all 0.3s ease-in;
+}
+
+.analyze_adder_button:hover {
+    opacity: 0.7;
+}
+
+.analyze_adder_button:hover .analyze_adder_icon {
+    transform: scale(110%);
+}
+
+.analyze_adder_button:active {
+    opacity: 0.6;
+}
+
+.analyze_adder_button:active .analyze_adder_icon {
+    transition: all 0.2s ease-in;
+    transform: scale(95%);
+}

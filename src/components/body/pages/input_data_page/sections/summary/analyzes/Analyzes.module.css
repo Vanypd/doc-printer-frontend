@@ -1,0 +1,52 @@
+.title {
+    display: flex;
+    min-height: 40px;
+    align-self: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.isolation_block {
+    position: relative;
+}
+
+.isolation_recolor {
+    width: calc(100% + 30px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    background-color: var(--field-isolator);
+}
+
+.isolation {
+    position: relative;
+    margin: 0 auto;
+    padding: 30px 0;
+    z-index: 2;
+}
+
+.analyzes {
+    display: flex;
+    flex-direction: row;
+}
+
+.analyzes_left {
+    width: 350px;
+    flex-shrink: 0;
+}
+
+.analyzes_right {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.analyzes_fields {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 620px;
+}
