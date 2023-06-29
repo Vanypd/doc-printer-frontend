@@ -4,7 +4,7 @@ import Block_division from '../../block_division/Block_division'
 import Data_textarea from '../../../../UI/input/data_textarea/Data_textarea'
 import Submit_button from '../../../../UI/button/submit_button/Submit_button'
 
-const Diares = () => {
+const Diares = ({patientData, dataSetter}) => {
     
 
     return (
@@ -14,10 +14,10 @@ const Diares = () => {
             </Block_division>
 
             <Block_division>
-                <Data_textarea style={{ minHeight: '400px' }} />
+                <Data_textarea data={patientData.diaries} setData={e => dataSetter.setDiaries(e)} style={{ minHeight: '400px' }} />
             </Block_division>
 
-            <Block_division>
+            <Block_division style={{justifyContent: 'center'}}>
                 <Submit_button onClick={() => { }}>Редактировать</Submit_button>
             </Block_division>
         </section>

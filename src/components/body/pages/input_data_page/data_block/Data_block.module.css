@@ -2,9 +2,6 @@
     position: relative;
     padding: 15px;
     border: 1px solid var(--main-theme-turquoise-color);
-}
-
-.section:not(:last-child) {
     margin-bottom: 100px;
 }
 

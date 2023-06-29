@@ -28,6 +28,7 @@
 }
 
 .analyzes {
+    position: relative;
     display: flex;
     flex-direction: row;
 }
@@ -49,4 +50,25 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 620px;
+}
+
+.close_button {
+    position: absolute;
+    top: -25px;
+    right: -10px;
+}
+
+.close_button svg {
+    fill: var(--main-theme-turquoise-color);
+    transition: all 0.1s ease-in-out;
+}
+
+.close_button:hover svg {
+    fill: rgb(216, 9, 9);
+    transform: scale(110%);
+}
+
+.close_button:active svg {
+    transform: scale(95%);
+    filter: brightness(75%);
 }

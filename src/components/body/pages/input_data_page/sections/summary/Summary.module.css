@@ -76,6 +76,8 @@
     cursor: pointer;
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, #3D3D3D 100%);
     opacity: 0.5;
+    outline-color: var(--main-theme-turquoise-color);
+    outline-offset: 1px;
     transition: all 0.3s ease-in-out;
 
 }
@@ -89,6 +91,12 @@
 
 .analyze_adder_button:hover {
     opacity: 0.7;
+}
+
+.analyze_adder_button:focus {
+    opacity: 0.7;
+    outline: 1px solid var(--main-theme-turquoise-color);
+
 }
 
 .analyze_adder_button:hover .analyze_adder_icon {

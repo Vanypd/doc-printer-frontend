@@ -38,13 +38,43 @@ function App() {
   const [goRisk, setGoRisk] = useState('')
   const [vtecPrevent, setVtecPrevent] = useState('')
   const [attendingDoctor, setAttendingDoctor] = useState('')
-  const [manager, setManager] = useState('')
+  const [manager, setManager] = useState(undefined)
+
   const [diaries, setDiaries] = useState('')
 
   const [medicalHistoryNumber, setMedicalHistoryNumber] = useState('')
   const [dateOfDischarge, setDateOfDischarge] = useState('')
   const [workAbility, setWorkAbility] = useState('')
   const [instrumentalExaminationMethods, setInstrumentalExaminationMethods] = useState('')
+  const [clinicalAnalyzes, setClinicalAnalyzes] = useState(
+    [
+      {
+        itemKey: 0,
+        selectorValue: 1,
+        date: '',
+        rbc: '',
+        wbc: '',
+        plt: '',
+        hgb: '',
+      },
+      {
+        itemKey: 1,
+        selectorValue: 2,
+        date: '',
+        alt: '',
+        ast: '',
+        tb: '',
+        gluc: '',
+        cre: '',
+        ua: '',
+      }, {
+        itemKey: 2,
+        selectorValue: 3,
+        date: '',
+        comment: '',
+      }
+    ]
+  )
 
   const [recomendations, setRecomendations] = useState('')
 
@@ -93,9 +123,7 @@ function App() {
       dateOfDischarge: dateOfDischarge, // Дата выписки
       workAbility: workAbility, // Трудоспособность
       instrumentalExaminationMethods: instrumentalExaminationMethods, // Инструментальные методы обследования
-      generalExamination: {
-
-      },
+      clinicalAnalyzes: clinicalAnalyzes,
       recomendations: recomendations, // Рекомендации
     }
   }
@@ -136,6 +164,7 @@ function App() {
     setDateOfDischarge: setDateOfDischarge,
     setWorkAbility: setWorkAbility,
     setInstrumentalExaminationMethods: setInstrumentalExaminationMethods,
+    setClinicalAnalyzes: setClinicalAnalyzes,
     setRecomendations: setRecomendations,
 
   }

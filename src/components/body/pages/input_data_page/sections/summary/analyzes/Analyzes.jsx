@@ -6,12 +6,26 @@ import Data_field from '../../../../../UI/input/data_field/Data_field'
 import Analyzes_field from './analyzes_field/Analyzes_field'
 import Data_textarea from '../../../../../UI/input/data_textarea/Data_textarea'
 
-const Analizes = ({ itemKey, type, data, setData }) => {
+const Analizes = ({ itemKey, type, data, setData, arraySetter }) => {
+
+  const deleteAnalyze = () => {
+    let array = [...data];
+    array.splice(itemKey, 1);
+
+    for (let i = 0; i < array.length; i++) {
+      array[i].itemKey = i
+    }
+
+    arraySetter(array)
+  }
 
   const returnCompSelector = () => {
     if (type == 1) {
       return (
         <div className={cl.analyzes}>
+          <div className={cl.close_button} onClick={deleteAnalyze}>
+            <svg width="30px" height="30px" viewBox="-3.5 0 19 19" xmlns="http://www.w3.org/2000/svg" ><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z" /></svg>
+          </div>
           <div className={cl.analyzes_left}>
             <Block_division>
               <Data_selector
@@ -22,7 +36,7 @@ const Analizes = ({ itemKey, type, data, setData }) => {
 
             <Block_division style={{ marginBottom: '0' }}>
               <div className={[cl.title, 'title_text_style'].join(' ')} style={{ width: '60px' }}>Дата:</div>
-              <Data_field onInput={e => setData(itemKey, type, 'date', e.target.value)} data={data[itemKey].date} style={{ width: '130px', textAlign: 'center' }} />
+              <Data_field setData={e => setData(itemKey, type, 'date', e)} data={data[itemKey].date} style={{ width: '130px', textAlign: 'center' }} />
             </Block_division>
           </div>
 
@@ -41,6 +55,9 @@ const Analizes = ({ itemKey, type, data, setData }) => {
     if (type == 2) {
       return (
         <div className={cl.analyzes}>
+          <div className={cl.close_button} onClick={deleteAnalyze}>
+            <svg width="30px" height="30px" viewBox="-3.5 0 19 19" xmlns="http://www.w3.org/2000/svg" ><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z" /></svg>
+          </div>
           <div className={cl.analyzes_left}>
             <Block_division>
               <Data_selector
@@ -51,7 +68,7 @@ const Analizes = ({ itemKey, type, data, setData }) => {
 
             <Block_division style={{ marginBottom: '0' }}>
               <div className={[cl.title, 'title_text_style'].join(' ')} style={{ width: '60px' }}>Дата:</div>
-              <Data_field onInput={e => setData(itemKey, type, 'date', e.target.value)} data={data[itemKey].date} style={{ width: '130px', textAlign: 'center' }} />
+              <Data_field setData={e => setData(itemKey, type, 'date', e)} data={data[itemKey].date} style={{ width: '130px', textAlign: 'center' }} />
             </Block_division>
           </div>
 
@@ -72,6 +89,9 @@ const Analizes = ({ itemKey, type, data, setData }) => {
     if (type == 3) {
       return (
         <div className={cl.analyzes}>
+          <div className={cl.close_button} onClick={deleteAnalyze}>
+            <svg width="30px" height="30px" viewBox="-3.5 0 19 19" xmlns="http://www.w3.org/2000/svg" ><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z" /></svg>
+          </div>
           <div className={cl.analyzes_left}>
             <Block_division>
               <Data_selector
@@ -82,13 +102,13 @@ const Analizes = ({ itemKey, type, data, setData }) => {
 
             <Block_division style={{ marginBottom: '0' }}>
               <div className={[cl.title, 'title_text_style'].join(' ')} style={{ width: '60px' }}>Дата:</div>
-              <Data_field onInput={e => setData(itemKey, type, 'date', e.target.value)} data={data[itemKey].date} style={{ width: '130px', textAlign: 'center' }} />
+              <Data_field setData={e => setData(itemKey, type, 'date', e)} data={data[itemKey].date} style={{ width: '130px', textAlign: 'center' }} />
             </Block_division>
           </div>
 
           <div className={cl.analyzes_right}>
             <div className={cl.analyzes_fields}>
-              <Data_textarea fieldData={e => setData(itemKey, type, 'comment', e.target.value)} data={data[itemKey].comment} />
+              <Data_textarea setData={e => setData(itemKey, type, 'comment', e)} data={data[itemKey].comment} />
             </div>
           </div>
         </div>

@@ -110,7 +110,7 @@ const Initial_inspection = ({ patientData, dataSetter }) => {
             </Block_division>
 
             <Block_division>
-                <Data_selector value={patientData.InitialInspection.council.councilType} setValue={dataSetter.setCouncilType} options={['Заведующий', 'Уборщик']} defaultLable={'Выберите заведующего'} selectorStyle={{ width: '800px', margin: 'auto' }} nonUsedStyle={[1, 0, 0]} />
+                <Data_selector value={patientData.InitialInspection.manager} setValue={dataSetter.setManager} options={['Заведующий', 'Уборщик']} defaultLable={'Выберите заведующего'} selectorStyle={{ width: '800px', margin: 'auto' }} nonUsedStyle={[1, 0, 0]} />
             </Block_division>
         </section>
     )

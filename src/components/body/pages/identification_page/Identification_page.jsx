@@ -16,7 +16,7 @@ const Identification_page = ({ setPage, patientData, dataSetter}) => {
         <div className={cl.body_container}>
             <div className={cl.identificator}>
                 <h2 className={cl.identificator_title}>Введите идентификатор пациента</h2>
-                <Data_field id={'outpatientCard'} style={{margin: '0 auto', width: '700px', marginBottom: '60px', outlineWidth: '2px', outlineOffset: '1px'}} data={patientData.patientСard.outpatientCard} setData={dataSetter.setOutpatientCard} />
+                <Data_field data={patientData.patientСard.outpatientCard} setData={dataSetter.setOutpatientCard} id={'outpatientCard'} style={{margin: '0 auto', width: '700px', marginBottom: '60px', outlineWidth: '2px', outlineOffset: '1px'}}/>
                 <Submit_button onClick={() => { changePage('/input_data', 'Input data') }}>Подтвердить</Submit_button>
             </div>
         </div>
