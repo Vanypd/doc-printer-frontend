@@ -30,4 +30,15 @@
     --header-button-text-size: 18px;
     --header-button-text-line-height: auto;
     --header-button-text-weight: 400;
+
+    --to-print-title-font-family: 'Times New Roman', Times, serif;
+    --to-print-title-size: 9pt;
+    --to-print-title-line-height: auto;
+    --to-print-title-weight: 600;
+
+    --to-print-text-font-family: 'Times New Roman', Times, serif;
+    --to-print-text-size: 8pt;
+    --to-print-text-line-height: auto;
+    --to-print-text-weight: 400;
+
 }

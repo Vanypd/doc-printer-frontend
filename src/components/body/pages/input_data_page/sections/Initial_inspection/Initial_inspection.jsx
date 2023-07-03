@@ -9,7 +9,7 @@ const Initial_inspection = ({ patientData, dataSetter }) => {
     return (
         <section className={cl.data}>
             <Block_division>
-                <div className={[cl.title, 'title_text_style'].join(' ')} style={{ width: '230px' }}>Дата:</div>
+                <div className={[cl.title, 'title_text_style'].join(' ')} style={{ width: '230px' }}>Дата и время:</div>
                 <Data_field data={patientData.InitialInspection.date} setData={e => dataSetter.setDate(e)} style={{ width: '250px', textAlign: 'center' }} />
             </Block_division>
 
@@ -44,8 +44,8 @@ const Initial_inspection = ({ patientData, dataSetter }) => {
             </Block_division>
 
             <Block_division>
-                <div className={[cl.title, 'title_text_style'].join(' ')} style={{ width: '230px' }}>Анамнез жизни:</div>
-                <Data_textarea data={patientData.InitialInspection.anamnesisOfLife} setData={e => dataSetter.setAnamnesisOfLife(e)} style={{ minHeight: '100px' }} />
+                <div className={[cl.title, 'title_text_style'].join(' ')} style={{ width: '230px', textAlign: 'start' }}>Лечение сопутствующей патологии:</div>
+                <Data_textarea data={patientData.InitialInspection.treatmentOfComorbidity} setData={e => dataSetter.setTreatmentOfComorbidity(e)} style={{ minHeight: '100px' }} />
             </Block_division>
 
             <Block_division>
@@ -83,22 +83,19 @@ const Initial_inspection = ({ patientData, dataSetter }) => {
 
             <Block_division>
                 <div className={[cl.title, 'title_text_style'].join(' ')} style={{ width: '230px', textAlign: 'start' }}>В плане:</div>
-                <Data_selector value={patientData.InitialInspection.plans} setValue={dataSetter.setPlans} options={['Героин', 'Кокаин']} defaultLable={'Выберите план'} selectorStyle={{ justifyContent: 'start', textAlign: 'start' }} usedStyle={[1, 1, 1]} />
+                <Data_selector value={patientData.InitialInspection.plans} setValue={dataSetter.setPlans} options={['ВПХТ', 'ВПИТ', 'ПХТ', 'АДТ', 'ПХТ + АДТ' ]} defaultLable={'Выберите план'} selectorStyle={{width: '150px', textAlign: 'start', marginRight: '10px' }} usedStyle={[1, 1, 1]} />
+                <Data_selector value={patientData.InitialInspection.plans} setValue={dataSetter.setPlans} options={['1, 2, 3 курс (Доксорубицин 50 мг в/п, еженедельно).', '4, 5, 6 курс (Доксорубицин 50 мг в/п, еженедельно).', '7, 8, 9 поддерживающие курсы (Доксорубицин 50 мг в/п, еженедельно).', '10, 11, 12 поддерживающие курсы (Доксорубицин 50 мг в/п, еженедельно).', '13, 14, 15 поддерживающие курсы (Доксорубицин 50 мг в/п, еженедельно).', ]} defaultLable={'Выберите план'} selectorStyle={{ justifyContent: 'start', textAlign: 'start' }} usedStyle={[1, 1, 1]} />
             </Block_division>
 
             <div className={cl.isolation_block} style={{ marginBottom: '20px' }}>
                 <div className={cl.isolation}>
                     <Block_division>
                         <div className={[cl.title, 'title_text_style'].join(' ')} style={{ width: '230px' }}>Степень риска ВТЭО:</div>
-                        <Data_textarea data={patientData.InitialInspection.vtecRiskLevel} setData={e => dataSetter.setVtecRiskLevel(e)} />
+                        <Data_selector value={patientData.InitialInspection.vtecRiskLevel} setValue={dataSetter.setVtecRiskLevel} options={['Низкий', 'Умеренный', 'Высокий']} defaultLable={'Не выбрано'} selectorStyle={{ justifyContent: 'start', textAlign: 'start' }}  />
                     </Block_division>
                     <Block_division>
                         <div className={[cl.title, 'title_text_style'].join(' ')} style={{ width: '230px' }}>Риск ГО:</div>
-                        <Data_textarea data={patientData.InitialInspection.goRisk} setData={e => dataSetter.setGoRisk(e)} />
-                    </Block_division>
-                    <Block_division>
-                        <div className={[cl.title, 'title_text_style'].join(' ')} style={{ width: '230px', textAlign: 'start' }}>Способ профилактики ВТЭО:</div>
-                        <Data_textarea data={patientData.InitialInspection.vtecPrevent} setData={e => dataSetter.setVtecPrevent(e)} />
+                        <Data_selector value={patientData.InitialInspection.goRisk} setValue={dataSetter.setGoRisk} options={['Низкий', 'Умеренный', 'Высокий']} defaultLable={'Не выбрано'} selectorStyle={{ justifyContent: 'start', textAlign: 'start' }}  />
                     </Block_division>
                 </div>
                 <div className={cl.isolation_recolor}></div>

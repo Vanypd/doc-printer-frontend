@@ -26,7 +26,7 @@ function App() {
   const [councilNumber, setCouncilNumber] = useState('')
   const [councilDate, setCouncilDate] = useState('')
   const [councilComment, setCouncilComment] = useState('')
-  const [anamnesisOfLife, setAnamnesisOfLife] = useState('')
+  const [treatmentOfComorbidity, setTreatmentOfComorbidity] = useState('')
   const [generalStatus, setGeneralStatus] = useState('')
   const [statusLocalis, setStatusLocalis] = useState('')
   const [additionalExaminationMethods, setAdditionalExaminationMethods] = useState('')
@@ -34,10 +34,9 @@ function App() {
   const [complications, setComplications] = useState('')
   const [concomitantDiagnosis, setConcomitantDiagnosis] = useState('')
   const [plans, setPlans] = useState(undefined)
-  const [vtecRiskLevel, setVtecRiskLevel] = useState('')
-  const [goRisk, setGoRisk] = useState('')
-  const [vtecPrevent, setVtecPrevent] = useState('')
-  const [attendingDoctor, setAttendingDoctor] = useState('')
+  const [vtecRiskLevel, setVtecRiskLevel] = useState(undefined)
+  const [goRisk, setGoRisk] = useState(undefined)
+  const [attendingDoctor, setAttendingDoctor] = useState('Майстренко Е.В.')
   const [manager, setManager] = useState(undefined)
 
   const [diaries, setDiaries] = useState('')
@@ -103,7 +102,7 @@ function App() {
         councilDate: councilDate, // Дата консилиума
         councilComment: councilComment, // Комментарий консилиума
       },
-      anamnesisOfLife: anamnesisOfLife, // Анамнез жизни 
+      treatmentOfComorbidity: treatmentOfComorbidity, // Анамнез жизни 
       generalStatus: generalStatus, // Общий статус
       statusLocalis: statusLocalis, // STATUS LOCALIS
       additionalExaminationMethods: additionalExaminationMethods, // Дополнительные методы обследования
@@ -113,7 +112,6 @@ function App() {
       plans: plans, // В плане
       vtecRiskLevel: vtecRiskLevel, // Степень риска ВТЭО
       goRisk: goRisk, // Риск ГО
-      vtecPrevent: vtecPrevent, // Способ профилактики ВТЭО
       attendingDoctor: attendingDoctor, // Лечащий врач
       manager: manager, // Заведующий
     },
@@ -146,7 +144,7 @@ function App() {
     setCouncilNumber: setCouncilNumber,
     setCouncilDate: setCouncilDate,
     setCouncilComment: setCouncilComment,
-    setAnamnesisOfLife: setAnamnesisOfLife,
+    setTreatmentOfComorbidity: setTreatmentOfComorbidity,
     setGeneralStatus: setGeneralStatus,
     setStatusLocalis: setStatusLocalis,
     setAdditionalExaminationMethods: setAdditionalExaminationMethods,
@@ -156,7 +154,6 @@ function App() {
     setPlans: setPlans,
     setVtecRiskLevel: setVtecRiskLevel,
     setGoRisk: setGoRisk,
-    setVtecPrevent: setVtecPrevent,
     setAttendingDoctor: setAttendingDoctor,
     setManager: setManager,
     setDiaries: setDiaries,

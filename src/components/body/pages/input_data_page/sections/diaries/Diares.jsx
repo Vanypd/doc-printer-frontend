@@ -17,9 +17,6 @@ const Diares = ({patientData, dataSetter}) => {
                 <Data_textarea data={patientData.diaries} setData={e => dataSetter.setDiaries(e)} style={{ minHeight: '400px' }} />
             </Block_division>
 
-            <Block_division style={{justifyContent: 'center'}}>
-                <Submit_button onClick={() => { }}>Редактировать</Submit_button>
-            </Block_division>
         </section>
     )
 }

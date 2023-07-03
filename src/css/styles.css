@@ -44,3 +44,20 @@ body {
     color: white;
 }
 
+.to_print_title_style {
+    font-family: var(--to-print-title-font-family);
+    font-size: var(--to-print-title-size);
+    line-height: var(--to-print-title-line-height);
+    font-weight: var(--to-print-title-weight);
+    color: #000;
+}
+
+.to_print_text_style {
+    font-family: var(--to-print-text-font-family);
+    font-size: var(--to-print-text-size);
+    line-height: var(--to-print-text-line-height);
+    font-weight: var(--to-print-text-weight);
+    color: #000;
+}
+
+  

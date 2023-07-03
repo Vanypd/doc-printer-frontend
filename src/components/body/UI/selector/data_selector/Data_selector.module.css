@@ -95,7 +95,8 @@
 
 .selector_option {
     display: flex;
-    justify-content: center;
+    padding: 0 10px;
+    /* justify-content: center; */
     align-items: center;
     width: 100%;
     height: var(--selector-height);

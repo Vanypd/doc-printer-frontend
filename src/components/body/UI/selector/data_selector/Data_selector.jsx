@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import cl from './Data_selector.module.css'
 
-const Data_selector = ({ options, value, setValue, selectorStyle, defaultLable, usedStyle, nonUsedStyle }) => {
+const Data_selector = ({ options, value, setValue, selectorStyle, defaultLable, usedStyle, nonUsedStyle, ...props}) => {
     const [isActive, setActive] = useState(false)
     const [lable, setLable] = useState(defaultLable)
     const [isUsed, setUsed] = useState(false)

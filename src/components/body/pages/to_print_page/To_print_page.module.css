@@ -1,0 +1,58 @@
+@import url(/src/css/GLOBAL_STYLES.css);
+
+.body_container {
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 1200px;
+    height: 100%;
+}
+
+.to_print_block {
+    width: 210mm;
+    margin: 0 auto;
+}
+
+.spacing {
+    height: 20px;
+    width: 100%;
+    background-color: var(--background-theme);
+}
+
+@media print {
+
+    @page {
+        size: A5;
+    }
+
+    html,
+    body {
+        height: 297mm;
+        width: 210mm;
+    }
+
+    header {
+        display: none;
+    }
+
+    .body_container {
+        height: 297mm;
+        width: 210mm;
+        padding: 0;
+        margin: 0;
+    }
+
+    .to_print_block {
+        height: 297mm;
+        width: 210mm;
+        padding: 0;
+        margin: 0;
+    }
+
+    .to_print_button {
+        display: none;
+    }
+
+    .spacing {
+        display: none;
+    }
+}
