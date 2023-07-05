@@ -11,6 +11,10 @@ const To_print_page = ({ setPage, patientData }) => {
     content: () => componentRef.current,
   });
 
+  const docxCreator = () => {
+    
+  }
+
   return (
     <div className={cl.body_container} >
       <div  className={cl.to_print_block}  >
@@ -24,6 +28,7 @@ const To_print_page = ({ setPage, patientData }) => {
       </div>
       <div style={{ paddingTop: '100px' }}></div>
 
+      <Submit_button className={cl.to_print_button} onClick={docxCreator}>DOCX</Submit_button>
       <Submit_button className={cl.to_print_button} onClick={handlePrint}>Печать</Submit_button>
 
     </div>
