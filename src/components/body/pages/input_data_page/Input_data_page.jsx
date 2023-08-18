@@ -17,7 +17,6 @@ const Input_data_page = ({ setPage, patientData, dataSetter }) => {
   }
 
   const dataConfirm = () => {
-    console.log(patientData)
     changePage('/to_print', 'To print')
   }
 

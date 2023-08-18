@@ -1,23 +1,8 @@
 @import url(/src/css/GLOBAL_STYLES.css);
 
-@media print {
-    
-    .spacing {
-        display: none;
-    }
-}
-
 .text_justify {
     text-align: justify;
     text-justify: inter-word;
-}
-
-.A4_list_page {
-    width: 100%;
-    height: 297mm;
-    padding: 10mm 10mm 10mm 20mm;
-    background-color: #fff;
-    /* border: 1px solid var(--main-theme-turquoise-color); */
 }
 
 .mid_title {
@@ -38,10 +23,4 @@
 
 .bottom_margin {
     margin-bottom: 10pt;
-}
-
-.spacing {
-    height: 20px;
-    width: 100%;
-    background-color: var(--background-theme);
 }

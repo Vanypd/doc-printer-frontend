@@ -44,6 +44,14 @@ body {
     color: white;
 }
 
+.to_print_big_title_style {
+    font-family: var(--to-print-title-font-family);
+    font-size: var(--to-print-big-title-size);
+    line-height: var(--to-print-title-line-height);
+    font-weight: var(--to-print-title-weight);
+    color: #000;
+}
+
 .to_print_title_style {
     font-family: var(--to-print-title-font-family);
     font-size: var(--to-print-title-size);
@@ -59,5 +67,22 @@ body {
     font-weight: var(--to-print-text-weight);
     color: #000;
 }
+
+.to_print_cambria_title_style {
+    font-family: var(--to-print-cambria-title-font-family);
+    font-size: var(--to-print-cambria-title-size);
+    line-height: var(--to-print-cambria-title-line-height);
+    font-weight: var(--to-print-cambria-title-weight);
+    color: #000;
+}
+
+.to_print_cambria_text_style {
+    font-family: var(--to-print-cambria-text-font-family);
+    font-size: var(--to-print-cambria-text-size);
+    line-height: var(--to-print-cambria-text-line-height);
+    font-weight: var(--to-print-cambria-text-weight);
+    color: #000;
+}
+
 
   

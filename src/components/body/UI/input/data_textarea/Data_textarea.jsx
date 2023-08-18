@@ -10,6 +10,10 @@ const Data_textarea = ({id, data, setData, disabled, ...props}) => {
     setData(e.target.value)
   }
 
+  useEffect(() => {
+
+  }, [])
+
   return (
     <textarea
     {...props}

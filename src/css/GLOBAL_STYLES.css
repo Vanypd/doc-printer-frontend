@@ -33,6 +33,7 @@
 
     --to-print-title-font-family: 'Times New Roman', Times, serif;
     --to-print-title-size: 9pt;
+    --to-print-big-title-size: 12pt;
     --to-print-title-line-height: auto;
     --to-print-title-weight: 600;
 
@@ -40,5 +41,15 @@
     --to-print-text-size: 8pt;
     --to-print-text-line-height: auto;
     --to-print-text-weight: 400;
+
+    --to-print-cambria-title-font-family: Cambria, Georgia, serif;
+    --to-print-cambria-title-size: 11pt;
+    --to-print-cambria-title-line-height: auto;
+    --to-print-cambria-title-weight: 400;
+
+    --to-print-cambria-text-font-family: Cambria, Georgia, serif;
+    --to-print-cambria-text-size: 9pt;
+    --to-print-cambria-text-line-height: auto;
+    --to-print-cambria-text-weight: 400;
 
 }

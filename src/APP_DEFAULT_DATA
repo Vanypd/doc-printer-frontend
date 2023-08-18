@@ -1,0 +1,68 @@
+  const [outpatientCard, setOutpatientCard] = useState('')
+  const [fullName, setFullName] = useState('')
+  const [dateOfBirth, setDateOfBirth] = useState('')
+  const [snils, setSnils] = useState('')
+  const [gender, setGender] = useState(undefined)
+  const [bloodType, setBloodType] = useState(undefined)
+  const [disability, setDisability] = useState(undefined)
+
+  const [date, setDate] = useState('')
+  const [complaints, setComplaints] = useState('')
+  const [medicalHistory, setMedicalHistory] = useState('')
+  const [histoDate, setHistoDate] = useState('')
+  const [histoNumber, setHistoNumber] = useState('')
+  const [histoComment, setHistoComment] = useState('')
+  const [councilType, setCouncilType] = useState(undefined)
+  const [councilNumber, setCouncilNumber] = useState('')
+  const [councilDate, setCouncilDate] = useState('')
+  const [councilComment, setCouncilComment] = useState('')
+  const [treatmentOfComorbidity, setTreatmentOfComorbidity] = useState('')
+  const [generalStatus, setGeneralStatus] = useState('')
+  const [statusLocalis, setStatusLocalis] = useState('')
+  const [additionalExaminationMethods, setAdditionalExaminationMethods] = useState('')
+  const [diagnosis, setDiagnosis] = useState('')
+  const [complications, setComplications] = useState('')
+  const [concomitantDiagnosis, setConcomitantDiagnosis] = useState('')
+  const [plans, setPlans] = useState(undefined)
+  const [vtecRiskLevel, setVtecRiskLevel] = useState(undefined)
+  const [goRisk, setGoRisk] = useState(undefined)
+  const [attendingDoctor, setAttendingDoctor] = useState('Майстренко Е.В.')
+  const [manager, setManager] = useState(undefined)
+
+  const [diaries, setDiaries] = useState('')
+
+  const [medicalHistoryNumber, setMedicalHistoryNumber] = useState('')
+  const [dateOfDischarge, setDateOfDischarge] = useState('')
+  const [workAbility, setWorkAbility] = useState('')
+  const [instrumentalExaminationMethods, setInstrumentalExaminationMethods] = useState('')
+  const [clinicalAnalyzes, setClinicalAnalyzes] = useState(
+    [
+      {
+        itemKey: 0,
+        selectorValue: 1,
+        date: '',
+        rbc: '',
+        wbc: '',
+        plt: '',
+        hgb: '',
+      },
+      {
+        itemKey: 1,
+        selectorValue: 2,
+        date: '',
+        alt: '',
+        ast: '',
+        tb: '',
+        gluc: '',
+        cre: '',
+        ua: '',
+      }, {
+        itemKey: 2,
+        selectorValue: 3,
+        date: '',
+        comment: '',
+      }
+    ]
+  )
+
+  const [recomendations, setRecomendations] = useState('')
