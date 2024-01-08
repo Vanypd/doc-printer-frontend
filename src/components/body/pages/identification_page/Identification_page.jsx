@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import cl from './Identification_page.module.css'
 import Submit_button from '../../UI/button/submit_button/Submit_button'
 import { useNavigate } from 'react-router-dom'

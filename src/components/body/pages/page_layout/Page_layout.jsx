@@ -12,7 +12,7 @@ const Page_layout = ({ pages, containerRef, horizontal }) => {
                                 {page.map((element, index) => (<div key={index}>{element}</div>))}
                             </div>
                         </div>
-                        {index != (pages.length - 1) ? <div className={cl.spacing}></div> : null}
+                        {index !== (pages.length - 1) ? <div className={cl.spacing}></div> : null}
                     </div>
                 )
             })}

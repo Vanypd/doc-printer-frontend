@@ -26,7 +26,7 @@
   const [plans, setPlans] = useState(undefined)
   const [vtecRiskLevel, setVtecRiskLevel] = useState(undefined)
   const [goRisk, setGoRisk] = useState(undefined)
-  const [attendingDoctor, setAttendingDoctor] = useState('Майстренко Е.В.')
+  const [attendingDoctor, setAttendingDoctor] = useState('')
   const [manager, setManager] = useState(undefined)
 
   const [diaries, setDiaries] = useState('')

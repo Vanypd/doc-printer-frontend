@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
-import Identification_page from './components/body/pages/identification_page/Identification_page';
-import Input_data_page from './components/body/pages/input_data_page/Input_data_page';
-import To_print_page from './components/body/pages/to_print_page/To_print_page';
+import IdentificationPage from './components/body/pages/identification_page/Identification_page';
+import InputDataPage from './components/body/pages/input_data_page/Input_data_page';
+import ToPrintPage from './components/body/pages/to_print_page/To_print_page';
 
 function App() {
   const [currentPage, setCurrenPage] = useState('Identification')
 
   const [outpatientCard, setOutpatientCard] = useState('123124')
-  const [fullName, setFullName] = useState('Дмитрий Вчеславович Михно')
+  const [fullName, setFullName] = useState('Степаненко Назар Бандерович')
   const [dateOfBirth, setDateOfBirth] = useState('20.04.1972')
   const [snils, setSnils] = useState('12-312-3-123-123-1')
   const [gender, setGender] = useState(1)
@@ -36,7 +36,7 @@ function App() {
   const [plans, setPlans] = useState(1)
   const [vtecRiskLevel, setVtecRiskLevel] = useState(1)
   const [goRisk, setGoRisk] = useState(1)
-  const [attendingDoctor, setAttendingDoctor] = useState('Майстренко Е.В.')
+  const [attendingDoctor, setAttendingDoctor] = useState('')
   const [manager, setManager] = useState(1)
 
   const [diaries, setDiaries] = useState('')
@@ -172,9 +172,9 @@ function App() {
       <BrowserRouter>
         <Header currentPage={currentPage} setCurrenPage={setCurrenPage} dataSetter={dataSetter} />
         <Routes>
-          <Route path='*' element={<Identification_page setPage={setCurrenPage} patientData={patientData} dataSetter={dataSetter} />} />
-          <Route path='/input_data' element={<Input_data_page setPage={setCurrenPage} patientData={patientData} dataSetter={dataSetter} />} />
-          <Route path='/to_print' element={<To_print_page setPage={setCurrenPage} patientData={patientData} />} />
+          <Route path='*' element={<IdentificationPage setPage={setCurrenPage} patientData={patientData} dataSetter={dataSetter} />} />
+          <Route path='/input_data' element={<InputDataPage setPage={setCurrenPage} patientData={patientData} dataSetter={dataSetter} />} />
+          <Route path='/to_print' element={<ToPrintPage setPage={setCurrenPage} patientData={patientData} />} />
         </Routes>
       </BrowserRouter>
     </div>
